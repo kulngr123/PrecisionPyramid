@@ -1,0 +1,13 @@
+<p>
+  test works!
+</p>
+<div *ngFor="let detail of details">
+{{detail.name}}
+</div>{{detail.name}}
+<input type="text" #name placeholder="Enter Name" value="Kulshresth"><br>
+<input type="text" #address placeholder="Enter Address" value="Noida"><br>
+<select #myColor (change)=getColor(myColor.value)>
+  <option *ngFor="let color of colors" value={{color}}>{{color}}</option>
+</select><br>{{myColor.value}}
+<button (click)="GetUserDetails(name.value,address.value)">Submit</button>
+
